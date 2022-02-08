@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Nunito+Sans:wght@400;700&display=swap"
@@ -53,54 +54,37 @@
     </div>
   </nav>
   
-<div class="container">
-    <h1 class="text-center"></h1>
-    <h2 class="text-center"></h2>
-    <h3 class="text-center"></h3>
-    <h4 class="text-center"></h4>
-    <h5 class="text-center"></h5>
-    <img src="" alt="">
-  </div>
- 
+  <div class="container mt-5 pj-container">
+    <div class="row align-items-center">
+      <h1 class= "text-center text-secondary fs-1 fw-bold text-light mb-5"></h1>
+
+      <div class="col-md-5 mt-5">
+
+        <div class="pj-img" id="imgCharacter" >
+        </div>
+      </div>
+
+      <div class="col-md-6 mx-0 pj-info">
+
+        <div class="fs-2 text-light"  id= "statusCharacter"></div>
+        <div class= "fs-2 text-light" id= "genderCharacter"></div>
+        <div class= "fs-2 text-light" id= "speciesCharacter"></div>
+        <div class= "fs-2 text-light" id= "originCharacter"></div>
+       
+    
+      </div>
+              
+          
+    </div>
+  </div> 
+
+  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
-  <script>
-    const nameCharacter = document.querySelector('h1');
-    const statusCharacter = document.querySelector('h2');
-    const speciesCharacter = document.querySelector('h3');
-    const genderCharacter = document.querySelector('h4');
-    const originCharacter = document.querySelector('h5');
-     console.log(this);
-
-    const parametro = window.location.search;
-   console.log(parametro);
-    const urlParams = new URLSearchParams(parametro);
-    let id = urlParams.get('id');
-    
-    const getCharacterById = async (id) => {
-     try {
-      const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
-      const data = response.json();
-      return data; 
-     } catch (error) {
-       console.log(error);
-     }
-      
-    }
-    
-    getCharacterById(id).then( data => {
-      nameCharacter.innerText = data.name
-      statusCharacter.innerText = data.status
-      speciesCharacter.innerText = data.species
-      genderCharacter.innerText = data.gender
-      originCharacter.innerText = data.origin.name
-    }).catch(err => err);
-
-    // peticion al api pero por id
-    // https://rickandmortyapi.com/api/character/1
-  </script>
+  <script src="/js/personaje.js"></script>
 </body>
 
 </html>

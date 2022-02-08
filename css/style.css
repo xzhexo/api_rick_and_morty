@@ -13,3 +13,24 @@ body {
 .card {
   width: 18rem; /* 16px *  18*/
 }
+
+.pj-container {
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.pj-img img{
+  border-radius: 50%;
+  border: 5px solid green;
+  display: flex;
+  margin-top: -100px;
+  width: 300px;
+  
+  
+}
+
+.pj-info{
+display: flex;
+flex-direction: column;
+margin-top: -100px;
+}

@@ -1,0 +1,10 @@
+body{
+
+  background: rgb(22,172,201);
+  background: radial-gradient(circle, rgba(22,172,201,1) 73%, rgba(253,187,45,1) 100%);
+}
+
+.container{
+background-image: url('/img/space.jpg');
+
+}
